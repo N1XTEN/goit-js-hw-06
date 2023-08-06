@@ -12,3 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const list = document.querySelector('ul.gallery');
+const mark = images.map(({url, alt}) => `<li class="list-item"> <img src="${url}" alt="${alt}" width=300"> </li>`).join('')
+list.insertAdjacentHTML("beforeend", mark);
+list.style.cssText = "display: flex; flex-direction: column; gap: 20px; list-style-type: none;"
